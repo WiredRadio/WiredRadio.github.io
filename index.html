@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="content" role="main">
+  <div class="row">
+        <div class="col-sm-4 text-center">
+            <img height="250px" width="250px" src="/assets/img/logo.jpg" alt="" class="img-circle">
+            <h2>WIRED RADIO</h2>
+            <p>Wired Radio is a student run radio station at Goldsmiths, University Of London. With over 60 weekly shows, from punk politics to all vinyl reggae, Wired is a platform for students to showcase their interests online. <a href="https://www.facebook.com/WIREDRADIOGOLDSMITHS">Wired Radio on Facebook.</a></p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <img height="250px" width="250px" src="/assets/img/mixcloud.png" alt="" class="img-circle">
+            <h2>Mixcloud</h2>
+            <p>It's the 21st century so you catch up on all our shows, live events and talks whenever you want on our Mixcloud. <a href="http://www.mixcloud.com/wiredradiogoldsmiths/">Wired Radio on Mixcloud.</a></p>
+        </div>
+        <div class="col-sm-4 text-center">
+            <img height="250px" width="250px" src="/assets/img/wisdomTeeth.jpg" alt="" class="img-circle">
+            <h2>wisdom teeth</h2>
+            <p>Wisdom Teeth is our show of the week. Host, Will Bond, shares his thoughts on Internet Comedy, muses over your questions and plays some tunes. <a href="http://www.mixcloud.com/wisdomteeth/wisdom-teeth-4-internet-comedy/">Listen here.</a> </p>
+        </div>
+    </div>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <article class="post">
+        <header class="post-header">
+          <h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
+          <span class="post-meta"><time datetime="{{ post.date | date: "%b %-d, %Y" }}">{{ post.date | date: "%b %-d, %Y" }}</time></span>
+        </header>
+      </article>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

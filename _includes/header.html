@@ -1,0 +1,19 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="{{@blog.url}}">{{@blog.title}}</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li><a href="http://wiredradio.co.uk/about-us/">About Us</a></li>
+            <li><a href="http://wiredradio.co.uk/wired-spring-schedule-released/">Schedule</a></li>
+            <li><a href="http://wiredradio.co.uk/contact-us/">Get Involved</a></li>
+            <li><a href="http://vimeo.com/user23635235">Wired TV</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li id="loading"><a><span>Loading audio stream...</span></a></li>
+            <li><form class="navbar-form"><button type="button" onclick="togglePlayback();" class="btn btn-default" id="playPause"><i class="fa fa-pause"></i></button></form></li>
+        </ul>
+    </div>
+    </div>
+</div>
